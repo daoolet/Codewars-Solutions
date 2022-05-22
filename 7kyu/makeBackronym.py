@@ -1,3 +1,4 @@
+dictionary = {}
 def make_backronym(acronym):
     s = ''
     for i in acronym:
