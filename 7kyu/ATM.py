@@ -1,10 +1,16 @@
-dol = [500,200,100,50,20,10]
-n = 1500
-k = 0
-for i in dol:
-    if n%i:
-        k+=1
-        n-=n%i
+def solve(n):
+    dol = [500,200,100,50,20,10]
+    i = 0
+    c = 0
+    
+    if n%10 == 0:
+        while n != 0:
+            if n//dol[i] >= 1:
+                n -= dol[i]
+                c+=1
+            else:
+                i+=1
 
-print(k)
-                
+        return c
+    else:
+        return -1
