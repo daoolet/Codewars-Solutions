@@ -1,14 +1,18 @@
-str = "what time are we climbing up the volcano"
-s = 0
-summa = []
+import string
 
-for word in str.split():
-    s = 0
-    for i in word:
-        s += ord(i)
+list2  = [i for i in range(1,27)]
+list1 = [i for i in string.ascii_lowercase]
+dct = dict(zip(list1,list2))
 
-    summa.append(s)
-    print(s, end='**')
+def high(x):
+    maxEl = 0
 
-
-print(max(summa))
+    for index, word in enumerate(x.split()):
+        s = 0
+        for i in word:
+            s += dct[i]
+        if s > maxEl:
+            maxEl = s
+            maxInd = index
+            
+    return x.split()[maxInd]
