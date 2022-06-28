@@ -1,5 +1,8 @@
 
-s = 'stop Making spongebob Memes'
+mass = []
 
-for i, x in enumerate(s):
-    print([x.upper(), x.lower()][0], end='')
+N = int(input())
+
+for i in range(N):
+    s = input().split()
+    print(s)
